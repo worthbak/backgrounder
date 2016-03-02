@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol MainViewControllerDelegate: class {
+  
+}
+
 class MainViewController: UIViewController {
+  
+  weak var delegate: MainViewControllerDelegate?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -25,7 +31,7 @@ class MainViewController: UIViewController {
     testView.widthAnchor.constraintEqualToConstant(100).active = true
     testView.heightAnchor.constraintEqualToConstant(100).active = true
     testView.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor).active = true
-    testView.centerYAnchor.constraintEqualToAnchor(self.view.centerYAnchor).active = true
+    testView.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor).active = true
   }
   
 }

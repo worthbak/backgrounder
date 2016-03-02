@@ -21,7 +21,11 @@ class MainViewCoordinator: NSObject, Coordinator {
   
   func start() {
     let viewCon = MainViewController()
-    //viewCon.delegate = self
+    viewCon.delegate = self
     self.navigationController.pushViewController(viewCon, animated: false)
   }
+}
+
+extension MainViewCoordinator: MainViewControllerDelegate {
+  
 }
