@@ -12,14 +12,14 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
-  var coordinator: BGAppCoordinator?
+  var coordinator: AppCoordinator?
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     
     self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
     
     let navCon = UINavigationController()
-    self.coordinator = BGAppCoordinator(withNavigationController: navCon)
+    self.coordinator = AppCoordinator(withNavigationController: navCon)
     self.coordinator?.start()
     
     self.window?.rootViewController = navCon

@@ -12,7 +12,7 @@ protocol Coordinator {
   func start()
 }
 
-class BGAppCoordinator: NSObject, Coordinator {
+class AppCoordinator: NSObject, Coordinator {
   
   let navigationController: UINavigationController
   var childCoordinators = [Coordinator]()
