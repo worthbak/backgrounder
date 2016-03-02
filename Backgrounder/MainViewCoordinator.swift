@@ -1,5 +1,5 @@
 //
-//  BGAppCoordinator.swift
+//  MainViewCoordinator.swift
 //  Backgrounder
 //
 //  Created by David Baker on 3/2/16.
@@ -8,23 +8,20 @@
 
 import UIKit
 
-protocol Coordinator {
-  func start()
-}
+protocol MainViewCoordinatorDelegate: class {}
 
-class AppCoordinator: NSObject, Coordinator {
+class MainViewCoordinator: NSObject, Coordinator {
   
+  weak var delegate: MainViewCoordinatorDelegate?
   let navigationController: UINavigationController
-  var childCoordinators = [Coordinator]()
   
   init(withNavigationController navigationController: UINavigationController) {
     self.navigationController = navigationController
   }
   
   func start() {
-    let mainCoordinator = MainViewCoordinator(withNavigationController: self.navigationController)
-    self.childCoordinators.append(mainCoordinator)
-    mainCoordinator.start()
+    let viewCon = MainViewController()
+    //viewCon.delegate = self
+    self.navigationController.pushViewController(viewCon, animated: false)
   }
-  
 }
