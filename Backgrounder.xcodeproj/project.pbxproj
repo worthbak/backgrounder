@@ -8,20 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		38FDDF5D1C875E8B00BB3187 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FDDF5C1C875E8B00BB3187 /* AppDelegate.swift */; };
-		38FDDF5F1C875E8B00BB3187 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FDDF5E1C875E8B00BB3187 /* ViewController.swift */; };
-		38FDDF621C875E8B00BB3187 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38FDDF601C875E8B00BB3187 /* Main.storyboard */; };
 		38FDDF641C875E8B00BB3187 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38FDDF631C875E8B00BB3187 /* Assets.xcassets */; };
 		38FDDF671C875E8B00BB3187 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38FDDF651C875E8B00BB3187 /* LaunchScreen.storyboard */; };
+		38FDDF711C87637D00BB3187 /* BGAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FDDF701C87637D00BB3187 /* BGAppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		38FDDF591C875E8B00BB3187 /* Backgrounder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Backgrounder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38FDDF5C1C875E8B00BB3187 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		38FDDF5E1C875E8B00BB3187 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		38FDDF611C875E8B00BB3187 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38FDDF631C875E8B00BB3187 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38FDDF661C875E8B00BB3187 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38FDDF681C875E8B00BB3187 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38FDDF701C87637D00BB3187 /* BGAppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BGAppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				38FDDF5C1C875E8B00BB3187 /* AppDelegate.swift */,
-				38FDDF5E1C875E8B00BB3187 /* ViewController.swift */,
-				38FDDF601C875E8B00BB3187 /* Main.storyboard */,
+				38FDDF701C87637D00BB3187 /* BGAppCoordinator.swift */,
 				38FDDF631C875E8B00BB3187 /* Assets.xcassets */,
 				38FDDF651C875E8B00BB3187 /* LaunchScreen.storyboard */,
 				38FDDF681C875E8B00BB3187 /* Info.plist */,
@@ -124,7 +121,6 @@
 			files = (
 				38FDDF671C875E8B00BB3187 /* LaunchScreen.storyboard in Resources */,
 				38FDDF641C875E8B00BB3187 /* Assets.xcassets in Resources */,
-				38FDDF621C875E8B00BB3187 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,22 +131,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38FDDF5F1C875E8B00BB3187 /* ViewController.swift in Sources */,
 				38FDDF5D1C875E8B00BB3187 /* AppDelegate.swift in Sources */,
+				38FDDF711C87637D00BB3187 /* BGAppCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		38FDDF601C875E8B00BB3187 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				38FDDF611C875E8B00BB3187 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		38FDDF651C875E8B00BB3187 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -284,6 +272,7 @@
 				38FDDF6D1C875E8B00BB3187 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
