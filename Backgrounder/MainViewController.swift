@@ -19,19 +19,25 @@ class MainViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    self.navigationItem.title = "ChatLog"
+    
     // Do any additional setup after loading the view.
     
     self.view.backgroundColor = .whiteColor()
     
-    let testView = UIView()
-    testView.backgroundColor = .greenColor()
+    // add the top calendar view
+    let testView = CalendarView(frame: CGRectZero)
     self.view.addSubview(testView)
     
+    let dayHeight = floor(self.view.frame.width / 7.0)
+    
     testView.translatesAutoresizingMaskIntoConstraints = false
-    testView.widthAnchor.constraintEqualToConstant(100).active = true
-    testView.heightAnchor.constraintEqualToConstant(100).active = true
-    testView.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor).active = true
+    testView.leadingAnchor.constraintEqualToAnchor(self.view.leadingAnchor).active = true
+    testView.trailingAnchor.constraintEqualToAnchor(self.view.trailingAnchor).active = true
+    testView.heightAnchor.constraintEqualToConstant(dayHeight).active = true
     testView.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor).active = true
+    
+    //
   }
   
 }
